@@ -150,8 +150,8 @@ void loop() {
   Serial.println(count);
   //digitalWrite(GPF8,HIGH);
   humidity = sondevalue*100/(sondehigh - sondelow);
-  if(humidity>35){digitalWrite(relaispin,LOW);}
-  if(humidity<30){digitalWrite(relaispin,HIGH);}
+  if(humidity>45){digitalWrite(relaispin,LOW);}//Apres un Test 37 - 38 correspondent a un pot de fleur humide 
+  if(humidity<40){digitalWrite(relaispin,HIGH);}
   Serial.println(humidity);
   tft.setCursor(0,0);
   tft.print("Humidite");
